@@ -1,0 +1,16 @@
+*How to convert Octal to Hexadecimal and Vice-Versa*
+
+Octal 0,1,2,3,4,5,6,7
+Hexadecimal  0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+
+There is no direct way hence we convert Octal to Binary and then Binary to Hexadecimal.
+
+#Octal to Hexadecimal:
+To convert Octal to Binary, we take individual digits, convert to decimal and then represent decimal to binary as 3 bits.
+This collection of 3 bits for each individual octal digit, will be the binary representation of that octal number.
+Now we group the digits in 4 bits and find the corresponding decimal value and then the hexadecimal value.
+
+#Hexadecimal to Octal 
+First we convert Hexadecimal to Binary by taking individual digits, convert to decimal and then represent decimal to binary as 4 bits.
+This collection of 4 bits for each individual hexa digit, will be the binary representation of that hexadecimal number.
+Now we group the digits in 3 bits and find the corresponding decimal value and then the octal value.
