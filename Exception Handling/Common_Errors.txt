@@ -1,0 +1,13 @@
+Different types of errors can occur while coding or while running a program.
+
+1. Syntax Errors: 
+* These errors are a problem of the programmer because he/she might be writing a wrong code which causes program to crash. 
+* Very easily resolved by the programmer since compiler provides warnings.
+
+2. Logical Errors:
+* The code is syntactically perfect, but if the code doesn't perform the same function that the programmer intended it to, then such errors are logical.
+* Compiler doesn't give warnings but it can be resolved by Debugger.
+
+3. Runtime Errors:
+* These are errors occurring at the client's end. The client may have put improper data/ not provided resources required for the code to run etc.
+* They are called exceptions because they are unaccounted for.
