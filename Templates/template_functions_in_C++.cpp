@@ -6,7 +6,7 @@
 
 using namespace std;
 
-template<class T>
+template<typename T>
 T maximum(T a, T b)
 {
   if(a>b)
