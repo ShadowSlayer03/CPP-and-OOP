@@ -51,5 +51,19 @@ int main()
   Rectangle rect3;
   rect3.setDimensions(10,20);
   cout<<rect3.computeArea()<<endl;
+
+  Rectangle* rect4 = new Rectangle;
+  cout<<rect4->computeArea()<<endl;
+  cout<<rect4->computePerimeter()<<endl;
+  Rectangle* rect5 = new Rectangle(70,80);
+  cout<<rect5->computeArea()<<endl;
+  cout<<rect5->computePerimeter()<<endl;
+  
+  rect4->setDimensions(15,25);
+  cout<<rect4->computeArea()<<endl;
+  cout<<rect4->computePerimeter()<<endl;
+
+  delete rect4;
+  delete rect5;
   return 0;
 }
