@@ -1,3 +1,4 @@
+//Some class functions maybe extra or some approach may seem tedious. Make changes to fit requirements.
 #include <iostream>
 using namespace std;
 
