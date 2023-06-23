@@ -1,5 +1,4 @@
 #include<iostream>
-#include<stdio.h>
 using namespace std;
 
 void division(float a,float b)
