@@ -1,4 +1,5 @@
 #include <iostream>
+#define SIZE 5
 using namespace std;
 
 class Student {
@@ -17,16 +18,22 @@ public:
 
 class Test {
 protected:
-    int totalScore;
+    int testScores[SIZE];
 
 public:
-    void setTotalScore(int score) {
-        totalScore = score;
-    }
+ void setTotalScore(int score[])
+ {
+  for(int i=0;i<SIZE;i++)
+   {
+      testScores[i] = score[i];
+   }
+ }
 
-    int getTotalScore() {
-        return totalScore;
-    }
+    int getTotalScore()
+        {
+        for(int i=0;i<SIZE;i++)
+        cout<<testScores[i]<<endl;
+         }
 };
 
 class Sports {
@@ -45,32 +52,35 @@ public:
 
 class Result : public Sports, public Test {
 public:
-    void displayResult() {
-        int finalScore = getTotalScore() + getSportsScore();
+    void displayResult()
+     {
+        int finalScore=0;
+        for(int i=0;i<SIZE;i++)
+        finalScore += testScores[i];
+        finalScore +=sportsScore;
         cout << "Total Score: " << finalScore << endl;
-    }
+     }
 };
 
 int main() {
     Result result;
-    string usn;
-    int testScore, sportsScore;
+    int testScores[SIZE], sportsScore,i;
 
-    cout << "Enter USN: ";
-    cin >> usn;
-    result.setUSN(usn);
-
-    cout << "Enter Test Score: ";
-    cin >> testScore;
-    result.setTotalScore(testScore);
+    cout << "Enter Test Scores of a student in various subjects: "<<endl;
+     for(i=0;i<SIZE;i++)
+    {
+         cin >> testScores[i];
+    }
+    result.setTotalScore(testScores);
 
     cout << "Enter Sports Score: ";
     cin >> sportsScore;
     result.setSportsScore(sportsScore);
 
     cout << endl;
-    cout << "Result for USN " << result.getUSN() << endl;
     result.displayResult();
 
     return 0;
 }
+
+
